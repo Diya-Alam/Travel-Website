@@ -7,8 +7,43 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+body{
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+main{
+    margin-top: 2rem;
+}
+
 .span-style{
     color: #FF5400;
+}
+
+p, .tour ul{
+    color: #5A5A5D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    word-wrap: break-word;
+}
+
+button{
+    background-color: #FF5400;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    word-wrap: break-word;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 7px;
+}
+
+.title{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    word-wrap: break-word;
 }
 
 /* nav styles */
@@ -17,7 +52,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border:2px solid #FF5400;
+    
+    
 }
 
 .nav-icon img{
@@ -56,11 +92,78 @@ nav li a{
     
 }
 
+/* banner */
+
+.banner{
+    position: relative;
+    text-align: center;
+
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-text, .banner-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.banner-title{
+    color: white;
+    font-size: 64px;
+    font-weight: 800;
+    word-wrap: break-word;
+}
+
+.banner-text > p{
+    color: white;
+}
+
+.banner-container{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    right: -50%; 
+}
+
+input{
+    background-color: white;
+    color: rgba(19, 19, 24, 0.50);
+    font-size: 16px;
+    font-weight: 400;
+    word-wrap: break-word;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 7px;
+}
+
+/* popular tour */
+
+.tour{
+    display: flex;
+    gap: 10%;
+}
+
 /* mobile query */
 
 @media screen and (max-width: 600px) {
+    
+    body{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
     nav{
         flex-direction: column; 
+        margin-bottom:  2rem;
     }
 
     .nav-icon img {
@@ -74,6 +177,37 @@ nav li a{
 
     nav li {
         margin-right: 0; 
+    }
+
+    .banner img{
+        height: 700px;
+        
+    }
+
+    .banner-title {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem;
+        gap: 7px;
+    }
+
+    .tour{
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .tour-text{
+        margin-bottom: 2rem;
     }
 
 }
