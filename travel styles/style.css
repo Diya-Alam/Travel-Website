@@ -154,42 +154,38 @@ input{
 
 /* Choose Destination */
 
-.destination-text{
+.destination-text,.choose-text{
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.destination-text p{
+.destination-text p,.choose-text p{
     padding: 0 20rem;
+    
 }
 
-.img-text{
-    /* color: white; */
-    font-size: 28px;
-    font-weight: 800;
-    word-wrap: break-word;
+.destination-img{
+   margin: 5rem;
 }
 
-/* .destination-img{
-   
-    height: calc((100% - 5px)/2);
+.first-row,.middle-row,.end-row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 1rem;
 }
-
-.first-row{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.middle-row{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
 
 /* choose */
+.choose-1st-row{
+    display: flex;
+    
+}
 
 .box1, .box3, .box2{
     background-color: #FBB56333;
     border-radius: 10px;
     padding: 2rem;
+   
 }
 
 .box3{
@@ -198,6 +194,21 @@ input{
 
 .box2{
     background-color: #29CEF633;
+}
+/* get lost */
+.get-lost{
+    justify-content: space-between;
+    
+}
+
+.get-lost-text{
+    border: 2px ;
+    border-radius: 10px;
+    padding: 5rem; 
+}
+
+.get-lost img{
+    padding: 0 3rem;
 }
 
 /* newsletter */
@@ -208,7 +219,7 @@ input{
     padding: 5rem;  
 }
 
-.choose-1st-row{
+.choose-1st-row,.get-lost{
     display: flex;
     gap: 2rem;
 }
@@ -234,6 +245,14 @@ input{
 .newsletter img{
     height: 100%;
     width: calc(100% - 0.5rem);
+}
+
+.news-img button{
+    padding: 2rem 4rem;
+    position:relative;
+    top: -20%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(-25deg);
 }
 
 .newsletter{
@@ -321,7 +340,7 @@ footer p{
         margin-bottom: 2rem;
     }
 
-    .destination-text p{
+    .destination-text p, .choose-text p{
         padding: 5%;
     }
 
@@ -329,17 +348,44 @@ footer p{
         margin-bottom: 0;
     }
 
-    .choose-1st-row{
+    .destination-img{
+        margin: 1rem;
+     }
+
+     .choose-1st-row{
         flex-direction: column;
+     }
+
+    .first-row,.middle-row,.end-row{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
     }
 
     .box1, .box2, .box3{
         margin: 2rem 0;
     }
 
-    .newsletter{
+    .get-lost-text{
+        padding: 0;
+    }
+
+    .newsletter, .get-lost{
         flex-direction: column;
         
+    }
+
+    .get-lost img{
+        padding-right: 0;
+    }
+
+    .news-img button{
+        padding: 1rem;
+        position:relative;
+        bottom: -40%;
+        left: 70%;
+        transform: translate(-20%, -150%) rotate(-25deg);
     }
 
     footer .footer-icon{
